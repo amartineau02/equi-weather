@@ -3,12 +3,22 @@ body {
 	font-family: $body;
 }
 
+.slide {
+	  transform: translateY(-100%);
+	}
+
 header {
-	background-color: $blue;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 3fr 1fr;
-	height: 100vh;
+	background-color: $blue;
+	transform: translateY(0%);
+  	transition: transform .5s;
 	.lead {
 		background-color: $brand;
 		padding: 2rem;

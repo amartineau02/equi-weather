@@ -19,7 +19,7 @@ $.getJSON('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/
 .done(function(forecast) {
 
 	$('header button').click(function(){
-	  $('header').hide();
+	  $('header').addClass('slide');
 	});
 
 	// The following line calls a function to display the main weather information. DO NOT EDIT THIS LINE.
@@ -38,6 +38,7 @@ $.getJSON('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/
 /* -----------------------------------------------
    Function for displaying the main weather info
    ----------------------------------------------- */
+
 
 // All of the data comes from the "forecast" object returned from the DarkSky API.
 // Inspect this page in the browser for a full list of data that can be used using the methods below.
