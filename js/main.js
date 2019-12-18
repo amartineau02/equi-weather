@@ -4,7 +4,7 @@
 
 // Replace the lat/long below with the lat/long for your desired location.
 // Get your city lat/long using https://www.latlong.net/
-var latlong = '45.657391,-68.708138';
+var latlong = '38.046360,-84.497017';
 
 // Your unique API key. Place the long string of characters between the quotes.
 var apikey = '9c200e867556081d48f46545f9eba2ad';
