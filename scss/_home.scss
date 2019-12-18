@@ -1,3 +1,36 @@
 body {
-	background-color: $brand;
+	background-color: $white;
+	font-family: $body;
+}
+
+header {
+	background-color: $blue;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 3fr 1fr;
+	height: 100vh;
+	.lead {
+		background-color: $brand;
+		padding: 2rem;
+		display: grid;
+		grid-column: 1;
+		grid-row: 2;
+		align-items: center;
+		justify-items: center;
+		img {
+			width: 100%;
+		}
+		button {
+			border: $blue solid .2rem;
+			border-radius: 2em;
+			background-color: $blue;
+			width: 50%;
+			color: $white;
+		}
+		button:hover {
+			background-color: $white;
+			color: $blue;
+			transition: .4s;
+		}
+	}
 }
