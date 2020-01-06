@@ -1,19 +1,48 @@
 .weather {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 8fr 1fr;
+	background-color: $white;
 	width: 100%;
 	height: 100vh;
 	.head {
 		padding: 1rem;
-		grid-column: 1 / span 2;
-		grid-row: 1;
 		background-color: $blue;
-		img {
-			width: 50%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		align-items: center;
+		.logo {
+			grid-column: 1;
+			grid-row: 1;
+			justify-items: start;
 		}
-		info {
-			width: 50%;
+		.info {
+			padding-right: 1rem;
+			grid-column: 2;
+			grid-row: 1;
+			text-align: right;
+			color: $white;
+		}
+	}
+	.current {
+		padding: 1rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		align-items: center;
+		justify-items: center;
+		.icon {
+			grid-column: 1;
+			grid-row: 1;
+			color: $blue;
+		}
+		.detail {
+			grid-column: 2;
+			grid-row: 1;
+			h1 {
+
+			}
+			p {
+
+			}
 		}
 	}
 }
