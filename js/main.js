@@ -46,7 +46,9 @@ $.getJSON('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/
 
 function displayData(forecast){
 
-	$('.weather .icon').append('<img src="'+displayIcon(forecast.daily.data[0].icon)+'">');
+	//	TODAY'S WEATHER
+
+	$('.weather .current .icon').append('<img src="'+displayIcon(forecast.daily.data[0].icon)+'">');
 
 	$('.weather .detail h1').html(forecast.daily.data[0].temperatureHigh);
 	$('.weather .detail h1').html(Math.round(forecast.daily.data[0].temperatureHigh));
@@ -67,6 +69,18 @@ function displayData(forecast){
 
 	$('.weather .detail .precip').html(forecast.daily.data[0].precipProbability);
 	$('.weather .detail .precip').html(Math.round(forecast.daily.data[0].precipProbability));
+
+
+
+	//	WEEKLY FORECAST
+
+	$('.weather .week .box0').append('<img src="'+displayIcon(forecast.daily.data[0].icon)+'">');
+	$('.weather .week .box1').append('<img src="'+displayIcon(forecast.daily.data[1].icon)+'">');
+	$('.weather .week .box2').append('<img src="'+displayIcon(forecast.daily.data[2].icon)+'">');
+	$('.weather .week .box3').append('<img src="'+displayIcon(forecast.daily.data[3].icon)+'">');
+	$('.weather .week .box4').append('<img src="'+displayIcon(forecast.daily.data[4].icon)+'">');
+	$('.weather .week .box5').append('<img src="'+displayIcon(forecast.daily.data[5].icon)+'">');
+	$('.weather .week .box6').append('<img src="'+displayIcon(forecast.daily.data[6].icon)+'">');
 
 }
 
