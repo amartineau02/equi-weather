@@ -48,12 +48,9 @@ function displayData(forecast){
 
 	//	TODAY'S WEATHER
 
-	$('.weather .current .icon').append('<img src="'+displayIcon(forecast.daily.data[0].icon)+'">');
+	$('.current .icon').append('<img src="'+displayIcon(forecast.daily.data[0].icon)+'">');
 
-	$('.weather .detail h1').html(forecast.daily.data[0].temperatureHigh);
-	$('.weather .detail h1').html(Math.round(forecast.daily.data[0].temperatureHigh));
-
-	// $('.weather .detail p1').html(forecast.daily.data[0].summary);
+	$('.sum').html(forecast.daily.data[0].summary);
 
 	$('.weather .detail .high').html(forecast.daily.data[0].temperatureHigh);
 	$('.weather .detail .high').html(Math.round(forecast.daily.data[0].temperatureHigh));
@@ -74,100 +71,110 @@ function displayData(forecast){
 
 	//	WEEKLY FORECAST
 
-	$('.weather .week .box0 .icon').append('<img src="'+displayIcon(forecast.daily.data[0].icon)+'">');
-	$('.weather .week .box1 .icon').append('<img src="'+displayIcon(forecast.daily.data[1].icon)+'">');
-	$('.weather .week .box2 .icon').append('<img src="'+displayIcon(forecast.daily.data[2].icon)+'">');
-	$('.weather .week .box3 .icon').append('<img src="'+displayIcon(forecast.daily.data[3].icon)+'">');
-	$('.weather .week .box4 .icon').append('<img src="'+displayIcon(forecast.daily.data[4].icon)+'">');
-	$('.weather .week .box5 .icon').append('<img src="'+displayIcon(forecast.daily.data[5].icon)+'">');
-	$('.weather .week .box6 .icon').append('<img src="'+displayIcon(forecast.daily.data[6].icon)+'">');
+	$('.box0 .icon').append('<img src="'+displayIcon(forecast.daily.data[0].icon)+'">');
+	$('.box1 .icon').append('<img src="'+displayIcon(forecast.daily.data[1].icon)+'">');
+	$('.box2 .icon').append('<img src="'+displayIcon(forecast.daily.data[2].icon)+'">');
+	$('.box3 .icon').append('<img src="'+displayIcon(forecast.daily.data[3].icon)+'">');
+	$('.box4 .icon').append('<img src="'+displayIcon(forecast.daily.data[4].icon)+'">');
+	$('.box5 .icon').append('<img src="'+displayIcon(forecast.daily.data[5].icon)+'">');
+	$('.box6 .icon').append('<img src="'+displayIcon(forecast.daily.data[6].icon)+'">');
 
-	$('.weather .week .box0 h1').html(forecast.daily.data[0].temperatureHigh);
-	$('.weather .week .box0 h1').html(Math.round(forecast.daily.data[0].temperatureHigh));
-	$('.weather .week .box1 h1').html(forecast.daily.data[1].temperatureHigh);
-	$('.weather .week .box1 h1').html(Math.round(forecast.daily.data[1].temperatureHigh));
-	$('.weather .week .box2 h1').html(foreca6yust.daily.data[2].temperatureHigh);
-	$('.weather .week .box2 h1').html(Math.round(forecast.daily.data[2].temperatureHigh));
-	$('.weather .week .box3 h1').html(forecast.daily.data[3].temperatureHigh);
-	$('.weather .week .box3 h1').html(Math.round(forecast.daily.data[3].temperatureHigh));
-	$('.weather .week .box4 h1').html(forecast.daily.data[4].temperatureHigh);
-	$('.weather .week .box4 h1').html(Math.round(forecast.daily.data[4].temperatureHigh));
-	$('.weather .week .box5 h1').html(forecast.daily.data[5].temperatureHigh);
-	$('.weather .week .box5 h1').html(Math.round(forecast.daily.data[5].temperatureHigh));
-	$('.weather .week .box6 h1').html(forecast.daily.data[6].temperatureHigh);
-	$('.weather .week .box6 h1').html(Math.round(forecast.daily.data[6].temperatureHigh));
+	$('.box0 h1').html(forecast.daily.data[0].temperatureHigh);
+	$('.box0 h1').html(Math.round(forecast.daily.data[0].temperatureHigh));
+	$('.box1 h1').html(forecast.daily.data[1].temperatureHigh);
+	$('.box1 h1').html(Math.round(forecast.daily.data[1].temperatureHigh));
+	$('.box2 h1').html(forecast.daily.data[2].temperatureHigh);
+	$('.box2 h1').html(Math.round(forecast.daily.data[2].temperatureHigh));
+	$('.box3 h1').html(forecast.daily.data[3].temperatureHigh);
+	$('.box3 h1').html(Math.round(forecast.daily.data[3].temperatureHigh));
+	$('.box4 h1').html(forecast.daily.data[4].temperatureHigh);
+	$('.box4 h1').html(Math.round(forecast.daily.data[4].temperatureHigh));
+	$('.box5 h1').html(forecast.daily.data[5].temperatureHigh);
+	$('.box5 h1').html(Math.round(forecast.daily.data[5].temperatureHigh));
+	$('.box6 h1').html(forecast.daily.data[6].temperatureHigh);
+	$('.box6 h1').html(Math.round(forecast.daily.data[6].temperatureHigh));
 
-	$('.weather .week .box0 h2').html(forecast.daily.data[0].temperatureLow);
-	$('.weather .week .box0 h2').html(Math.round(forecast.daily.data[0].temperatureLow));
+	$('.box0 h2').html(forecast.daily.data[0].temperatureLow);
+	$('.box0 h2').html(Math.round(forecast.daily.data[0].temperatureLow));
 
-	$('.weather .week .box0 h2').html(forecast.daily.data[0].temperatureLow);
-	$('.weather .week .box0 h2').html(Math.round(forecast.daily.data[0].temperatureLow));
-	$('.weather .week .box1 h2').html(forecast.daily.data[1].temperatureLow);
-	$('.weather .week .box1 h2').html(Math.round(forecast.daily.data[1].temperatureLow));
-	$('.weather .week .box2 h2').html(forecast.daily.data[2].temperatureLow);
-	$('.weather .week .box2 h2').html(Math.round(forecast.daily.data[2].temperatureLow));
-	$('.weather .week .box3 h2').html(forecast.daily.data[3].temperatureLow);
-	$('.weather .week .box3 h2').html(Math.round(forecast.daily.data[3].temperatureLow));
-	$('.weather .week .box4 h2').html(forecast.daily.data[4].temperatureLow);
-	$('.weather .week .box4 h2').html(Math.round(forecast.daily.data[4].temperatureLow));
-	$('.weather .week .box5 h2').html(forecast.daily.data[5].temperatureLow);
-	$('.weather .week .box5 h2').html(Math.round(forecast.daily.data[5].temperatureLow));
-	$('.weather .week .box6 h2').html(forecast.daily.data[6].temperatureLow);
-	$('.weather .week .box6 h2').html(Math.round(forecast.daily.data[6].temperatureLow));
+	$('.box0 h2').html(forecast.daily.data[0].temperatureLow);
+	$('.box0 h2').html(Math.round(forecast.daily.data[0].temperatureLow));
+	$('.box1 h2').html(forecast.daily.data[1].temperatureLow);
+	$('.box1 h2').html(Math.round(forecast.daily.data[1].temperatureLow));
+	$('.box2 h2').html(forecast.daily.data[2].temperatureLow);
+	$('.box2 h2').html(Math.round(forecast.daily.data[2].temperatureLow));
+	$('.box3 h2').html(forecast.daily.data[3].temperatureLow);
+	$('.box3 h2').html(Math.round(forecast.daily.data[3].temperatureLow));
+	$('.box4 h2').html(forecast.daily.data[4].temperatureLow);
+	$('.box4 h2').html(Math.round(forecast.daily.data[4].temperatureLow));
+	$('.box5 h2').html(forecast.daily.data[5].temperatureLow);
+	$('.box5 h2').html(Math.round(forecast.daily.data[5].temperatureLow));
+	$('.box6 h2').html(forecast.daily.data[6].temperatureLow);
+	$('.box6 h2').html(Math.round(forecast.daily.data[6].temperatureLow));
 
-	$('.weather .week .box0 .humidity').html(forecast.daily.data[0].humidity);
-	$('.weather .week .box1 .humidity').html(forecast.daily.data[1].humidity);
-	$('.weather .week .box2 .humidity').html(forecast.daily.data[2].humidity);
-	$('.weather .week .box3 .humidity').html(forecast.daily.data[3].humidity);
-	$('.weather .week .box4 .humidity').html(forecast.daily.data[4].humidity);
-	$('.weather .week .box5 .humidity').html(forecast.daily.data[5].humidity);
-	$('.weather .week .box6 .humidity').html(forecast.daily.data[6].humidity);
+	$('.box0 .humidity').html(forecast.daily.data[0].humidity);
+	$('.box1 .humidity').html(forecast.daily.data[1].humidity);
+	$('.box2 .humidity').html(forecast.daily.data[2].humidity);
+	$('.box3 .humidity').html(forecast.daily.data[3].humidity);
+	$('.box4 .humidity').html(forecast.daily.data[4].humidity);
+	$('.box5 .humidity').html(forecast.daily.data[5].humidity);
+	$('.box6 .humidity').html(forecast.daily.data[6].humidity);
 
-	$('.weather .week .box0 .winds').html(forecast.daily.data[0].windSpeed);
-	$('.weather .week .box0 .winds').html(Math.round(forecast.daily.data[0].windSpeed));
-	$('.weather .week .box1 .winds').html(forecast.daily.data[1].windSpeed);
-	$('.weather .week .box1 .winds').html(Math.round(forecast.daily.data[1].windSpeed));
-	$('.weather .week .box2 .winds').html(forecast.daily.data[2].windSpeed);
-	$('.weather .week .box2 .winds').html(Math.round(forecast.daily.data[2].windSpeed));
-	$('.weather .week .box3 .winds').html(forecast.daily.data[3].windSpeed);
-	$('.weather .week .box3 .winds').html(Math.round(forecast.daily.data[3].windSpeed));
-	$('.weather .week .box4 .winds').html(forecast.daily.data[4].windSpeed);
-	$('.weather .week .box4 .winds').html(Math.round(forecast.daily.data[4].windSpeed));
-	$('.weather .week .box5 .winds').html(forecast.daily.data[5].windSpeed);
-	$('.weather .week .box5 .winds').html(Math.round(forecast.daily.data[5].windSpeed));
-	$('.weather .week .box6 .winds').html(forecast.daily.data[6].windSpeed);
-	$('.weather .week .box6 .winds').html(Math.round(forecast.daily.data[6].windSpeed));
+	$('.box0 .winds').html(forecast.daily.data[0].windSpeed);
+	$('.box0 .winds').html(Math.round(forecast.daily.data[0].windSpeed));
+	$('.box1 .winds').html(forecast.daily.data[1].windSpeed);
+	$('.box1 .winds').html(Math.round(forecast.daily.data[1].windSpeed));
+	$('.box2 .winds').html(forecast.daily.data[2].windSpeed);
+	$('.box2 .winds').html(Math.round(forecast.daily.data[2].windSpeed));
+	$('.box3 .winds').html(forecast.daily.data[3].windSpeed);
+	$('.box3 .winds').html(Math.round(forecast.daily.data[3].windSpeed));
+	$('.box4 .winds').html(forecast.daily.data[4].windSpeed);
+	$('.box4 .winds').html(Math.round(forecast.daily.data[4].windSpeed));
+	$('.box5 .winds').html(forecast.daily.data[5].windSpeed);
+	$('.box5 .winds').html(Math.round(forecast.daily.data[5].windSpeed));
+	$('.box6 .winds').html(forecast.daily.data[6].windSpeed);
+	$('.box6 .winds').html(Math.round(forecast.daily.data[6].windSpeed));
 
-	$('.weather .week .box0 .precip').html(forecast.daily.data[0].precipProbability);
-	$('.weather .week .box1 .precip').html(forecast.daily.data[1].precipProbability);
-	$('.weather .week .box2 .precip').html(forecast.daily.data[2].precipProbability);
-	$('.weather .week .box3 .precip').html(forecast.daily.data[3].precipProbability);
-	$('.weather .week .box4 .precip').html(forecast.daily.data[4].precipProbability);
-	$('.weather .week .box5 .precip').html(forecast.daily.data[5].precipProbability);
-	$('.weather .week .box6 .precip').html(forecast.daily.data[6].precipProbability);
-	// $('.weather .week .box6 .precip').html(Math.round(forecast.daily.data[6].precipProbability));
+	$('.box0 .precip').html(forecast.daily.data[0].precipProbability);
+	$('.box1 .precip').html(forecast.daily.data[1].precipProbability);
+	$('.box2 .precip').html(forecast.daily.data[2].precipProbability);
+	$('.box3 .precip').html(forecast.daily.data[3].precipProbability);
+	$('.box4 .precip').html(forecast.daily.data[4].precipProbability);
+	$('.box5 .precip').html(forecast.daily.data[5].precipProbability);
+	$('.box6 .precip').html(forecast.daily.data[6].precipProbability);
+	// $('.box6 .precip').html(Math.round(forecast.daily.data[6].precipProbability));
 
 
+
+	$('.warning p').html(warning(forecast.daily.data[0].temperatureHigh));
 
 }
+
+
+// AAAAAA
+
+function warning(n){
+	if ( n >= 40 && n < 50 ){
+	    return 'It’s chilly out there. Make sure to have layers on and blanket any horses that need it.';
+	}
+}
+
+// function week{
+	$('.extra').hide();
+
+	$('.box').click(function(){
+	  // $('.box p').addClass('hide');
+	  $('.extra').hide();
+	  // $(this).find('p').removeClass('hide');
+	  $(this).find('.extra').toggle();
+	})
+
+
 
 
 /* -----------------------------------------------
    Function for creating day of the week
    ----------------------------------------------- */
-
-// based on a system where 0 = today, 1 = tomorrow, etc.
-// note: the number system below does not immediately correlate
-// for example, 0 for today does not line up with 0 for Sunday below
-// how this works – in the return statement, d.getDay() gets today's date
-// as a number (if today is Thursday, d.getDay() will be 4)
-// adding "n" to this number gives you how many days from today.
-// n is passed as an argument to the displayDay() function
-// in the main body of the code above.
-// if today is Thursday, the 4th day of the week,
-// and the number 2 is passed as an argument, 
-// the function will return the number 6. 6 maps to Saturday in the 
-// weekday array below.
 
 function displayDay(n){
 
@@ -184,9 +191,6 @@ function displayDay(n){
 
 	var dispDay = d.getDay() + n;
 
-	// adjust number system for numbers over 6
-	// subtract 7 from totals higher than 6
-	// to keep the day numbers in the array range above
 	if(dispDay > 6){
 		dispDay = dispDay - 7;
 	}
@@ -265,81 +269,3 @@ function displayIcon(n){
     		// code block
 	}
 }
-
-
-
-
-
-
-// if ( Math.round(forecast.daily.data[0].temperatureHigh) >= 40 && Math.round(forecast.daily.data[0].temperatureHigh) < 50 ){
-    
-// }
-
-
-// $('.box p').hide();
-
-// $('.box').click(function(){
-//   $('.box p').addClass('hide');
-//   // $('.box p').hide();
-//   $(this).find('p').removeClass('hide');
-//   // $(this).find('p').toggle();
-// })
-
-
-// ----------------------------------------------
-// ALL COMMENTS FROM EARLIER IN THE CODE
-// USED FOR REFERENCE & ORGANIZATION
-// ----------------------------------------------
-
-// Your header section covers over the main weather info.
-	// When the data is available, you will need to hide/remove this section
-	// in order to see the main content. How you do this is up to you.
-	// The most basic basic approach is to just hide the header (uncomment to use)
-		// $('header').hide();
-	
-	// Other methods include animating the header away.
-	// This can be done by adding a class name containing CSS animation
-	// code to the header like this (uncomment to use)
-		// $('header').addClass('anim');
-	// This assumes you have written a class with the animation code
-	// and named it .anim
-
-	// Another way to remove the header is to provide a button and the event
-	// to trigger what happens when the button is clicked (uncomment to use)
-	// $('header').append('<a class="button" href="#">Click</a>');
-	// $('header .button').click(function(){
-	//   $('header').hide();
-	// });
-
-
-
-	// Target an element in your interface and display dynamic weather information inside of it.
-
-	// All of the data you need is located in the "Console" tab when you inspect th code in the browser.
-	// Click the arrow next to the "Object" to drill down into the data.
-	// You can reference these data points in your code using the following method(s).
-
-	// For example, if I have an element <div class="today"> in my main content area
-	// I can add data from the "Daily" array like this.
-
-
-
-	// If I want to display the same information for tomorrow, change the 0 to 1
-		// $('.today').html(Math.round(forecast.daily.data[1].temperatureHigh));
-
-	// If I want to display a summary of the weather
-	// (like, "scattered thundershowers...") for today
-		// $('.today').html(forecast.daily.data[0].summary);
-
-		// If I want to modify the display of the page element based on the weather
-	// I can access the "icon" property. This returns a value that can be used
-	// as a CSS class name that you can create with your style details
-		// $('.today').addClass(forecast.daily.data[0].icon);
-
-	// Note – the value of "icon" above needs to be checked in the inspect
-	// panel. It may say "rain". If this is the case, you could create a rule
-	// inside your CSS called .rain and then add, maybe, a background color
-	// or image. The full range of weather values returned by the "icon" property are
-		// "clear-day", "clear-night", "rain", "snow", "sleet", "wind", "fog",
-		// "cloudy", "partly-cloudy-day", "partly-cloudy-night", "hail",
-		// "thunderstorm" and "tornado"
