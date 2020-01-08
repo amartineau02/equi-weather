@@ -53,7 +53,7 @@ function displayData(forecast){
 	$('.weather .detail h1').html(forecast.daily.data[0].temperatureHigh);
 	$('.weather .detail h1').html(Math.round(forecast.daily.data[0].temperatureHigh));
 
-	$('.weather .detail p1').html(forecast.daily.data[0].summary);
+	// $('.weather .detail p1').html(forecast.daily.data[0].summary);
 
 	$('.weather .detail .high').html(forecast.daily.data[0].temperatureHigh);
 	$('.weather .detail .high').html(Math.round(forecast.daily.data[0].temperatureHigh));
@@ -74,13 +74,30 @@ function displayData(forecast){
 
 	//	WEEKLY FORECAST
 
-	$('.weather .week .box0').append('<img src="'+displayIcon(forecast.daily.data[0].icon)+'">');
-	$('.weather .week .box1').append('<img src="'+displayIcon(forecast.daily.data[1].icon)+'">');
-	$('.weather .week .box2').append('<img src="'+displayIcon(forecast.daily.data[2].icon)+'">');
-	$('.weather .week .box3').append('<img src="'+displayIcon(forecast.daily.data[3].icon)+'">');
-	$('.weather .week .box4').append('<img src="'+displayIcon(forecast.daily.data[4].icon)+'">');
-	$('.weather .week .box5').append('<img src="'+displayIcon(forecast.daily.data[5].icon)+'">');
-	$('.weather .week .box6').append('<img src="'+displayIcon(forecast.daily.data[6].icon)+'">');
+	$('.weather .week .box0 .icon').append('<img src="'+displayIcon(forecast.daily.data[0].icon)+'">');
+	$('.weather .week .box1 .icon').append('<img src="'+displayIcon(forecast.daily.data[1].icon)+'">');
+	$('.weather .week .box2 .icon').append('<img src="'+displayIcon(forecast.daily.data[2].icon)+'">');
+	$('.weather .week .box3 .icon').append('<img src="'+displayIcon(forecast.daily.data[3].icon)+'">');
+	$('.weather .week .box4 .icon').append('<img src="'+displayIcon(forecast.daily.data[4].icon)+'">');
+	$('.weather .week .box5 .icon').append('<img src="'+displayIcon(forecast.daily.data[5].icon)+'">');
+	$('.weather .week .box6 .icon').append('<img src="'+displayIcon(forecast.daily.data[6].icon)+'">');
+
+	$('.weather .week .box0 h1').html(forecast.daily.data[0].temperatureHigh);
+	$('.weather .week .box0 h1').html(Math.round(forecast.daily.data[0].temperatureHigh));
+
+	$('.weather .week .box0 h2').html(forecast.daily.data[0].temperatureLow);
+	$('.weather .week .box0 h2').html(Math.round(forecast.daily.data[0].temperatureLow));
+
+	$('.weather .week .box0 .humidity').html(forecast.daily.data[0].humidity);
+	$('.weather .week .box0 .humidity').html(Math.round(forecast.daily.data[0].humidity));
+
+	$('.weather .week .box0 .winds').html(forecast.daily.data[0].windSpeed);
+	$('.weather .week .box0 .winds').html(Math.round(forecast.daily.data[0].windSpeed));
+
+	$('.weather .week .box0 .precip').html(forecast.daily.data[0].precipProbability);
+	$('.weather .week .box0 .precip').html(Math.round(forecast.daily.data[0].precipProbability));
+
+
 
 }
 
@@ -198,6 +215,26 @@ function displayIcon(n){
     		// code block
 	}
 }
+
+
+
+
+
+
+// if ( Math.round(forecast.daily.data[0].temperatureHigh) >= 40 && Math.round(forecast.daily.data[0].temperatureHigh) < 50 ){
+//     It looks like rain.
+// }
+
+
+$('.box p').hide();
+
+$('.box').click(function(){
+  $('.box p').addClass('hide');
+  // $('.box p').hide();
+  $(this).find('p').removeClass('hide');
+  // $(this).find('p').toggle();
+})
+
 
 // ----------------------------------------------
 // ALL COMMENTS FROM EARLIER IN THE CODE
