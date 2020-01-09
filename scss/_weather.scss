@@ -1,6 +1,7 @@
 .weather {
 	background-color: $white;
 	width: 100%;
+
 	// HEADER
 	.head {
 		padding: 1rem;
@@ -23,6 +24,7 @@
 		}
 	}
 	// CLOSING HEADER
+
 	// CURRENT WEATHER
 	.current {
 		padding: 1rem;
@@ -47,6 +49,7 @@
 		}
 	}
 	// CLOSING CURRENT WEATHER
+
 	// WARNING
 	.warning {
 		background-color: $blue;
@@ -55,6 +58,7 @@
 		font-size: 1.1rem;
 	}
 	// CLOSING WARNING
+	
 	// WEEK FORCAST
 	.week {
 		display: grid;
