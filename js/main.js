@@ -22,6 +22,10 @@ $.getJSON('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/
 	  $('header').addClass('slide');
 	});
 
+	$('.head .info').click(function(){
+	  $('.weather').addClass('slide');
+	});
+
 	// The following line calls a function to display the main weather information. DO NOT EDIT THIS LINE.
 	displayData(forecast);
 })
