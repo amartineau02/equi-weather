@@ -50,26 +50,28 @@ $.getJSON('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/
 
 function displayData(forecast){
 
-	//	TODAY'S WEATHER
+	//	CURRENT WEATHER
 
 	$('.current .icon').append('<img src="'+displayIcon(forecast.daily.data[0].icon)+'">');
 
 	$('.sum').html(forecast.daily.data[0].summary);
 
-	$('.weather .detail .high').html(forecast.daily.data[0].temperatureHigh);
-	$('.weather .detail .high').html(Math.round(forecast.daily.data[0].temperatureHigh));
+	$('.current .high p').html(forecast.daily.data[0].temperatureHigh);
+	$('.current .high p').html(Math.round(forecast.daily.data[0].temperatureHigh));
 
-	$('.weather .detail .low').html(forecast.daily.data[0].temperatureLow);
-	$('.weather .detail .low').html(Math.round(forecast.daily.data[0].temperatureLow));
+	$('.current .low p').html(forecast.daily.data[0].temperatureLow);
+	$('.current .low p').html(Math.round(forecast.daily.data[0].temperatureLow));
 
-	$('.weather .detail .humidity').html(forecast.daily.data[0].humidity);
+	$('.current .hum').html(forecast.daily.data[0].humidity);
 	// $('.weather .detail .humidity').html(Math.round(forecast.daily.data[0].humidity));
 
-	$('.weather .detail .winds').html(forecast.daily.data[0].windSpeed);
-	$('.weather .detail .winds').html(Math.round(forecast.daily.data[0].windSpeed));
+	$('.current .wind').html(forecast.daily.data[0].windSpeed);
+	$('.current .wind').html(Math.round(forecast.daily.data[0].windSpeed));
 
-	$('.weather .detail .precip').html(forecast.daily.data[0].precipProbability);
-	$('.weather .detail .precip').html(Math.round(forecast.daily.data[0].precipProbability));
+	$('.current .precip').html(forecast.daily.data[0].precipProbability);
+	$('.current .precip').html(Math.round(forecast.daily.data[0].precipProbability));
+
+	$('.warning p').html(warning(forecast.daily.data[0].temperatureHigh));
 
 
 
@@ -147,31 +149,40 @@ function displayData(forecast){
 	$('.box5 .precip').html(forecast.daily.data[5].precipProbability);
 	$('.box6 .precip').html(forecast.daily.data[6].precipProbability);
 	// $('.box6 .precip').html(Math.round(forecast.daily.data[6].precipProbability));
-
-
-
-	$('.warning p').html(warning(forecast.daily.data[0].temperatureHigh));
-
 }
 
 
-// AAAAAA
+// WARNING
 
 function warning(n){
-	if ( n >= 40 && n < 50 ){
-	    return 'It’s chilly out there. Make sure to have layers on and blanket any horses that need it.';
+	if ( n >= 75 && n < 90 ){
+	    return 'Go easy in lessons and exercises today. Cool down any horses after work with a walk and bath if needed.';
+	}
+
+	if ( n >= 35 && n < 55 ){
+	    return 'Make sure to blanket horses that are clipped, have thinner coats, or are naturally thin in build.';
+	}
+
+	if ( n >= 32 && n < 0 ){
+	    return 'Take caution bringing horses out today.';
+	}
+
+	if ( n >= 32 && n < 0 ){
+	    return 'Check all outdoor water buckets frequently to ensure they aren’t frozen over.';
 	}
 }
 
-// function week{
-	$('.extra').hide();
 
-	$('.box').click(function(){
-	  // $('.box p').addClass('hide');
-	  $('.extra').hide();
-	  // $(this).find('p').removeClass('hide');
-	  $(this).find('.extra').toggle();
-	})
+
+// HIDE WEEK DETAILS
+
+$('.extra').hide();
+$('.box').click(function(){
+  // $('.box p').addClass('hide');
+  $('.extra').hide();
+  // $(this).find('p').removeClass('hide');
+  $(this).find('.extra').toggle();
+})
 
 
 
