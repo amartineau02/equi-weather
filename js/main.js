@@ -62,14 +62,14 @@ function displayData(forecast){
 	$('.current .low p').html(forecast.daily.data[0].temperatureLow);
 	$('.current .low p').html(Math.round(forecast.daily.data[0].temperatureLow));
 
-	$('.hum').html(forecast.daily.data[0].humidity);
+	$('.current .hum').html(forecast.daily.data[0].humidity);
 	// $('.weather .detail .humidity').html(Math.round(forecast.daily.data[0].humidity));
 
-	$('.wind').html(forecast.daily.data[0].windSpeed);
-	$('.wind').html(Math.round(forecast.daily.data[0].windSpeed));
+	$('.current .wind').html(forecast.daily.data[0].windSpeed);
+	$('.current .wind').html(Math.round(forecast.daily.data[0].windSpeed));
 
-	$('.precip').html(forecast.daily.data[0].precipProbability);
-	$('.precip').html(Math.round(forecast.daily.data[0].precipProbability));
+	$('.current .precip').html(forecast.daily.data[0].precipProbability);
+	$('.current .precip').html(Math.round(forecast.daily.data[0].precipProbability));
 
 	$('.warning p').html(warning(forecast.daily.data[0].temperatureHigh));
 
@@ -140,13 +140,13 @@ function displayData(forecast){
 	$('.box6 .wind p').html(forecast.daily.data[6].windSpeed);
 	$('.box6 .wind p').html(Math.round(forecast.daily.data[6].windSpeed));
 
-	$('.box0 .precip p').html(forecast.daily.data[0].precipProbability);
-	$('.box1 .precip p').html(forecast.daily.data[1].precipProbability);
-	$('.box2 .precip p').html(forecast.daily.data[2].precipProbability);
-	$('.box3 .precip p').html(forecast.daily.data[3].precipProbability);
-	$('.box4 .precip p').html(forecast.daily.data[4].precipProbability);
-	$('.box5 .precip p').html(forecast.daily.data[5].precipProbability);
-	$('.box6 .precip p').html(forecast.daily.data[6].precipProbability);
+	$('.box0 .precip p').html(forecast.daily.data[0].precipProbability*100 + '%');
+	$('.box1 .precip p').html(forecast.daily.data[1].precipProbability*100 + '%');
+	$('.box2 .precip p').html(forecast.daily.data[2].precipProbability*100 + '%');
+	$('.box3 .precip p').html(forecast.daily.data[3].precipProbability*100 + '%');
+	$('.box4 .precip p').html(forecast.daily.data[4].precipProbability*100 + '%');
+	$('.box5 .precip p').html(forecast.daily.data[5].precipProbability*100 + '%');
+	$('.box6 .precip p').html(forecast.daily.data[6].precipProbability*100 + '%');
 	// $('.box6 .precip').html(Math.round(forecast.daily.data[6].precipProbability));
 }
 
@@ -175,12 +175,14 @@ function warning(n){
 
 // HIDE WEEK DETAILS
 
-$('.humidity, .wind, .precip').hide();
+$('.week .humidity, .week .wind, .week .precip').hide();
 $('.box').click(function(){
   // $('.box p').addClass('hide');
   $('.humidity, .wind, .precip').hide();
   // $(this).find('p').removeClass('hide');
-  $(this).find('.humidity, .wind, .precip').toggle();
+  $(this).find('.humidity').toggle();
+  $(this).find('.wind').toggle();
+  $(this).find('.precip').toggle();
 })
 
 

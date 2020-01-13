@@ -54,3 +54,27 @@ header {
 		}
 	}
 }
+
+@media screen and (min-width: 40em) {
+	header {
+		.lead {
+			img {
+				width: 75%;
+			}
+		}
+	}
+}
+
+
+@media screen and (min-width: 60em) {
+	header {
+		.lead {
+			img {
+				width: 50%;
+			}
+			button {
+				width: 20%;
+			}
+		}
+	}
+}
