@@ -62,14 +62,14 @@ function displayData(forecast){
 	$('.current .low p').html(forecast.daily.data[0].temperatureLow);
 	$('.current .low p').html(Math.round(forecast.daily.data[0].temperatureLow));
 
-	$('.current .hum').html(forecast.daily.data[0].humidity);
+	$('.hum').html(forecast.daily.data[0].humidity);
 	// $('.weather .detail .humidity').html(Math.round(forecast.daily.data[0].humidity));
 
-	$('.current .wind').html(forecast.daily.data[0].windSpeed);
-	$('.current .wind').html(Math.round(forecast.daily.data[0].windSpeed));
+	$('.wind').html(forecast.daily.data[0].windSpeed);
+	$('.wind').html(Math.round(forecast.daily.data[0].windSpeed));
 
-	$('.current .precip').html(forecast.daily.data[0].precipProbability);
-	$('.current .precip').html(Math.round(forecast.daily.data[0].precipProbability));
+	$('.precip').html(forecast.daily.data[0].precipProbability);
+	$('.precip').html(Math.round(forecast.daily.data[0].precipProbability));
 
 	$('.warning p').html(warning(forecast.daily.data[0].temperatureHigh));
 
@@ -85,38 +85,37 @@ function displayData(forecast){
 	$('.box5 .icon').append('<img src="'+displayIcon(forecast.daily.data[5].icon)+'">');
 	$('.box6 .icon').append('<img src="'+displayIcon(forecast.daily.data[6].icon)+'">');
 
-	$('.box0 h1').html(forecast.daily.data[0].temperatureHigh);
-	$('.box0 h1').html(Math.round(forecast.daily.data[0].temperatureHigh));
-	$('.box1 h1').html(forecast.daily.data[1].temperatureHigh);
-	$('.box1 h1').html(Math.round(forecast.daily.data[1].temperatureHigh));
-	$('.box2 h1').html(forecast.daily.data[2].temperatureHigh);
-	$('.box2 h1').html(Math.round(forecast.daily.data[2].temperatureHigh));
-	$('.box3 h1').html(forecast.daily.data[3].temperatureHigh);
-	$('.box3 h1').html(Math.round(forecast.daily.data[3].temperatureHigh));
-	$('.box4 h1').html(forecast.daily.data[4].temperatureHigh);
-	$('.box4 h1').html(Math.round(forecast.daily.data[4].temperatureHigh));
-	$('.box5 h1').html(forecast.daily.data[5].temperatureHigh);
-	$('.box5 h1').html(Math.round(forecast.daily.data[5].temperatureHigh));
-	$('.box6 h1').html(forecast.daily.data[6].temperatureHigh);
-	$('.box6 h1').html(Math.round(forecast.daily.data[6].temperatureHigh));
+	$('.box0 .high p').html(forecast.daily.data[0].temperatureHigh);
+	$('.box0 .high p').html(Math.round(forecast.daily.data[0].temperatureHigh));
+	$('.box1 .high p').html(forecast.daily.data[1].temperatureHigh);
+	$('.box1 .high p').html(Math.round(forecast.daily.data[1].temperatureHigh));
+	$('.box2 .high p').html(forecast.daily.data[2].temperatureHigh);
+	$('.box2 .high p').html(Math.round(forecast.daily.data[2].temperatureHigh));
+	$('.box3 .high p').html(forecast.daily.data[3].temperatureHigh);
+	$('.box3 .high p').html(Math.round(forecast.daily.data[3].temperatureHigh));
+	$('.box4 .high p').html(forecast.daily.data[4].temperatureHigh);
+	$('.box4 .high p').html(Math.round(forecast.daily.data[4].temperatureHigh));
+	$('.box5 .high p').html(forecast.daily.data[5].temperatureHigh);
+	$('.box5 .high p').html(Math.round(forecast.daily.data[5].temperatureHigh));
+	$('.box6 .high p').html(forecast.daily.data[6].temperatureHigh);
+	$('.box6 .high p').html(Math.round(forecast.daily.data[6].temperatureHigh));
 
-	$('.box0 h2').html(forecast.daily.data[0].temperatureLow);
-	$('.box0 h2').html(Math.round(forecast.daily.data[0].temperatureLow));
-
-	$('.box0 h2').html(forecast.daily.data[0].temperatureLow);
-	$('.box0 h2').html(Math.round(forecast.daily.data[0].temperatureLow));
-	$('.box1 h2').html(forecast.daily.data[1].temperatureLow);
-	$('.box1 h2').html(Math.round(forecast.daily.data[1].temperatureLow));
-	$('.box2 h2').html(forecast.daily.data[2].temperatureLow);
-	$('.box2 h2').html(Math.round(forecast.daily.data[2].temperatureLow));
-	$('.box3 h2').html(forecast.daily.data[3].temperatureLow);
-	$('.box3 h2').html(Math.round(forecast.daily.data[3].temperatureLow));
-	$('.box4 h2').html(forecast.daily.data[4].temperatureLow);
-	$('.box4 h2').html(Math.round(forecast.daily.data[4].temperatureLow));
-	$('.box5 h2').html(forecast.daily.data[5].temperatureLow);
-	$('.box5 h2').html(Math.round(forecast.daily.data[5].temperatureLow));
-	$('.box6 h2').html(forecast.daily.data[6].temperatureLow);
-	$('.box6 h2').html(Math.round(forecast.daily.data[6].temperatureLow));
+	$('.box0 .low p').html(forecast.daily.data[0].temperatureLow);
+	$('.box0 .low p').html(Math.round(forecast.daily.data[0].temperatureLow));
+	$('.box0 .low p').html(forecast.daily.data[0].temperatureLow);
+	$('.box0 .low p').html(Math.round(forecast.daily.data[0].temperatureLow));
+	$('.box1 .low p').html(forecast.daily.data[1].temperatureLow);
+	$('.box1 .low p').html(Math.round(forecast.daily.data[1].temperatureLow));
+	$('.box2 .low p').html(forecast.daily.data[2].temperatureLow);
+	$('.box2 .low p').html(Math.round(forecast.daily.data[2].temperatureLow));
+	$('.box3 .low p').html(forecast.daily.data[3].temperatureLow);
+	$('.box3 .low p').html(Math.round(forecast.daily.data[3].temperatureLow));
+	$('.box4 .low p').html(forecast.daily.data[4].temperatureLow);
+	$('.box4 .low p').html(Math.round(forecast.daily.data[4].temperatureLow));
+	$('.box5 .low p').html(forecast.daily.data[5].temperatureLow);
+	$('.box5 .low p').html(Math.round(forecast.daily.data[5].temperatureLow));
+	$('.box6 .low p').html(forecast.daily.data[6].temperatureLow);
+	$('.box6 .low p').html(Math.round(forecast.daily.data[6].temperatureLow));
 
 	$('.box0 .humidity p').html(forecast.daily.data[0].humidity);
 	$('.box1 .humidity p').html(forecast.daily.data[1].humidity);
