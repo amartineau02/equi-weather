@@ -25,6 +25,7 @@
 	}
 	// CLOSING HEADER
 
+
 	// CURRENT WEATHER
 	.current {
 		display: grid;
@@ -75,6 +76,7 @@
 	}
 	// CLOSING CURRENT WEATHER
 
+
 	// WARNING
 	.warning {
 		background-color: $blue;
@@ -84,53 +86,69 @@
 	}
 	// CLOSING WARNING
 	
+
 	// WEEK FORCAST
 	.week {
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(7, auto);
 		background-color: $white;
-		padding: 1rem;
 		color: $black;
 			h1 {
 				text-align: right;
-				margin: 1rem 0rem;
+				margin: 1.5rem;
 			}
 		    .box {
 		    	display: grid;
 		    	grid-template-columns: 1fr 1fr 1fr;
 		    	grid-template-rows: repeat(2, auto);
 		    	align-items: center;
+		    	text-align: center;
 			    .icon {
 			    	grid-column: 1;
 			    	grid-row: 1;
-			    	text-align: center;
 			    }
-			    h1 {
+			    .high {
 			    	grid-column: 2;
 			    	grid-row: 1;
-			    	text-align: center;
 			    }
-			    h2 {
+			    .low {
 			    	grid-column: 3;
 			    	grid-row: 1;
-			    	text-align: center;
 			    }
 			    .humidity {
 			    	grid-column: 1;
 			    	grid-row: 2;
-			    	text-align: center;
 			    }
-			    .winds {
+			    .wind {
 			    	grid-column: 2;
 			    	grid-row: 2;
-			    	text-align: center;
 			    }
 			    .precip {
 			    	grid-column: 3;
 			    	grid-row: 2;
-			    	text-align: center;
 			    }
+		  }
+		  .box0 {
+		  	background-color: lighten($blue, 40%);
+		  }
+		  .box1 {
+		  	background-color: lighten($blue, 35%);
+		  }
+		  .box2 {
+		  	background-color: lighten($blue, 30%);
+		  }
+		  .box3 {
+		  	background-color: lighten($blue, 25%);
+		  }
+		  .box4 {
+		  	background-color: lighten($blue, 20%);
+		  }
+		  .box5 {
+		  	background-color: lighten($blue, 15%);
+		  }
+		  .box6 {
+		  	background-color: lighten($blue, 10%);
 		  }
 	}
 }

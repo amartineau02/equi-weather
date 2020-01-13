@@ -118,36 +118,36 @@ function displayData(forecast){
 	$('.box6 h2').html(forecast.daily.data[6].temperatureLow);
 	$('.box6 h2').html(Math.round(forecast.daily.data[6].temperatureLow));
 
-	$('.box0 .humidity').html(forecast.daily.data[0].humidity);
-	$('.box1 .humidity').html(forecast.daily.data[1].humidity);
-	$('.box2 .humidity').html(forecast.daily.data[2].humidity);
-	$('.box3 .humidity').html(forecast.daily.data[3].humidity);
-	$('.box4 .humidity').html(forecast.daily.data[4].humidity);
-	$('.box5 .humidity').html(forecast.daily.data[5].humidity);
-	$('.box6 .humidity').html(forecast.daily.data[6].humidity);
+	$('.box0 .humidity p').html(forecast.daily.data[0].humidity);
+	$('.box1 .humidity p').html(forecast.daily.data[1].humidity);
+	$('.box2 .humidity p').html(forecast.daily.data[2].humidity);
+	$('.box3 .humidity p').html(forecast.daily.data[3].humidity);
+	$('.box4 .humidity p').html(forecast.daily.data[4].humidity);
+	$('.box5 .humidity p').html(forecast.daily.data[5].humidity);
+	$('.box6 .humidity p').html(forecast.daily.data[6].humidity);
 
-	$('.box0 .winds').html(forecast.daily.data[0].windSpeed);
-	$('.box0 .winds').html(Math.round(forecast.daily.data[0].windSpeed));
-	$('.box1 .winds').html(forecast.daily.data[1].windSpeed);
-	$('.box1 .winds').html(Math.round(forecast.daily.data[1].windSpeed));
-	$('.box2 .winds').html(forecast.daily.data[2].windSpeed);
-	$('.box2 .winds').html(Math.round(forecast.daily.data[2].windSpeed));
-	$('.box3 .winds').html(forecast.daily.data[3].windSpeed);
-	$('.box3 .winds').html(Math.round(forecast.daily.data[3].windSpeed));
-	$('.box4 .winds').html(forecast.daily.data[4].windSpeed);
-	$('.box4 .winds').html(Math.round(forecast.daily.data[4].windSpeed));
-	$('.box5 .winds').html(forecast.daily.data[5].windSpeed);
-	$('.box5 .winds').html(Math.round(forecast.daily.data[5].windSpeed));
-	$('.box6 .winds').html(forecast.daily.data[6].windSpeed);
-	$('.box6 .winds').html(Math.round(forecast.daily.data[6].windSpeed));
+	$('.box0 .wind p').html(forecast.daily.data[0].windSpeed);
+	$('.box0 .wind p').html(Math.round(forecast.daily.data[0].windSpeed));
+	$('.box1 .wind p').html(forecast.daily.data[1].windSpeed);
+	$('.box1 .wind p').html(Math.round(forecast.daily.data[1].windSpeed));
+	$('.box2 .wind p').html(forecast.daily.data[2].windSpeed);
+	$('.box2 .wind p').html(Math.round(forecast.daily.data[2].windSpeed));
+	$('.box3 .wind p').html(forecast.daily.data[3].windSpeed);
+	$('.box3 .wind p').html(Math.round(forecast.daily.data[3].windSpeed));
+	$('.box4 .wind p').html(forecast.daily.data[4].windSpeed);
+	$('.box4 .wind p').html(Math.round(forecast.daily.data[4].windSpeed));
+	$('.box5 .wind p').html(forecast.daily.data[5].windSpeed);
+	$('.box5 .wind p').html(Math.round(forecast.daily.data[5].windSpeed));
+	$('.box6 .wind p').html(forecast.daily.data[6].windSpeed);
+	$('.box6 .wind p').html(Math.round(forecast.daily.data[6].windSpeed));
 
-	$('.box0 .precip').html(forecast.daily.data[0].precipProbability);
-	$('.box1 .precip').html(forecast.daily.data[1].precipProbability);
-	$('.box2 .precip').html(forecast.daily.data[2].precipProbability);
-	$('.box3 .precip').html(forecast.daily.data[3].precipProbability);
-	$('.box4 .precip').html(forecast.daily.data[4].precipProbability);
-	$('.box5 .precip').html(forecast.daily.data[5].precipProbability);
-	$('.box6 .precip').html(forecast.daily.data[6].precipProbability);
+	$('.box0 .precip p').html(forecast.daily.data[0].precipProbability);
+	$('.box1 .precip p').html(forecast.daily.data[1].precipProbability);
+	$('.box2 .precip p').html(forecast.daily.data[2].precipProbability);
+	$('.box3 .precip p').html(forecast.daily.data[3].precipProbability);
+	$('.box4 .precip p').html(forecast.daily.data[4].precipProbability);
+	$('.box5 .precip p').html(forecast.daily.data[5].precipProbability);
+	$('.box6 .precip p').html(forecast.daily.data[6].precipProbability);
 	// $('.box6 .precip').html(Math.round(forecast.daily.data[6].precipProbability));
 }
 
@@ -176,12 +176,12 @@ function warning(n){
 
 // HIDE WEEK DETAILS
 
-$('.extra').hide();
+$('.humidity, .wind, .precip').hide();
 $('.box').click(function(){
   // $('.box p').addClass('hide');
-  $('.extra').hide();
+  $('.humidity, .wind, .precip').hide();
   // $(this).find('p').removeClass('hide');
-  $(this).find('.extra').toggle();
+  $(this).find('.humidity, .wind, .precip').toggle();
 })
 
 
