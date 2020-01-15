@@ -158,7 +158,7 @@ function warning(n){
 	    return 'Go easy in lessons and exercises today. Cool down any horses after work with a walk and bath if needed.';
 	}
 
-	if ( n >= 35 && n < 55 ){
+	if ( n >= 35 && n < 60 ){
 	    return 'Make sure to blanket horses that are clipped, have thinner coats, or are naturally thin in build.';
 	}
 
